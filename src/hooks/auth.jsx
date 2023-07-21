@@ -82,7 +82,6 @@ function AuthProvider({children}){
         <AuthContext.Provider value={{
             signIn,
             signOut,
-            updateProfile,
             user: data.user
         }}>
             {children}
