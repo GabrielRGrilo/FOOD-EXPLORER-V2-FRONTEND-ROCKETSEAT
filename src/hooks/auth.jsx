@@ -7,6 +7,7 @@ function AuthProvider({children}){
     const [data, setData] = useState({});
 
     async function signIn({email, password}) {
+        let loadingStatus = true;
 
         try {
 
@@ -25,6 +26,7 @@ function AuthProvider({children}){
             }else{
                 alert("Nao foi possivel entrar")
             }
+            return(loadingStatus = false)
         }
     }
 
