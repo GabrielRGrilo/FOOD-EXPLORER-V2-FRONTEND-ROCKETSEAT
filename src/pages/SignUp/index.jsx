@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-
+import { Link } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
@@ -45,7 +45,7 @@ export function SignUp() {
         <Logo />
 
         <form>
-          <legend>Faça o login</legend>
+          <legend>Cadastre-se</legend>
 
           <Input
             label="Nome"
@@ -64,11 +64,12 @@ export function SignUp() {
           <Input
             label="Senha"
             type="password"
-            placeholder="No mínimo 6 caracteres"
+            placeholder="Mínimo de 6 caracteres"
             onChange={(e) => setPassword(e.target.value)}
           />
 
           <Button type="button" title="Criar conta" onClick={handleSignUp} />
+          <Link to={-1}>Já tenho uma conta</Link>
 
         </form>
       </main>

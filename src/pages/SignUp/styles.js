@@ -5,12 +5,12 @@ export const Container = styled.div`
   min-height: 100vh;
 
   main {
-    width: 90%;
+    width: 100%;
+    height: 100vh;
     max-width: 31.6rem;
     margin: 15.8rem auto;
     overflow-y: auto;
     > form {
-      margin-top: 7.3rem;
 
       display: flex;
       flex-direction: column;
@@ -76,7 +76,7 @@ export const Container = styled.div`
           display: block;
           font-family: "Poppins", sans-serif;
             font-weight: 100;
-            font-size: 1.4rem;
+            font-size: 2.4rem;
             line-height: 2.4rem;
             color: ${({ theme }) => theme.COLORS.LIGHT_100};
             text-align: center;

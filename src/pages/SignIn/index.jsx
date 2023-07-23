@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Logo} from '../../components/Logo';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 export function SignIn() {
   const [email, setEmail] = useState();
@@ -38,7 +39,7 @@ export function SignIn() {
           <Input
             label="Senha"
             type="password"
-            placeholder="No mínimo 6 caracteres"
+            placeholder="Mínimo de 6 caracteres"
             onChange={(e) => setPassword(e.target.value)}
           />
 
@@ -48,6 +49,7 @@ export function SignIn() {
             onClick={handleSignIn}
             disabled={loading}
           />
+         <Link to="/register">Criar uma conta</Link>
 
         </form>
       </main>
