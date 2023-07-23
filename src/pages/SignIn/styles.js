@@ -1,176 +1,93 @@
-import { styled } from "styled-components"
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    width: 100%;
-    height: 100vh;
-    padding: 0 2.6rem;
-    gap: 7rem;
-    overflow-x : hidden;
+  width: 100%;
+  min-height: 100vh;
 
-    .loader {
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  main {
+    width: 90%;
+    max-width: 31.6rem;
+    margin: 15.8rem auto;
 
-    > div {
-        max-width: 70rem;
-        animation: increaseSize 0.5s ease;
-        h1 {
-            font-family: "Roboto", "serif";
-            font-size: 4.2rem;
-        }
-        
-        img {
-            width: 5rem;
-            height: 5rem;
-        }
-    }
+    > form {
+      margin-top: 7.3rem;
 
-    
-    @media (max-width: 395px) {
-        > h1 {
-            font-size: 3.4rem;
-        }
-        
-        img {
-            width: 3.5rem;
-            height: 3.5rem;
-        }
-        }
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
 
-    @media (max-width:819px) {
-        > div {
-            display: none;
-        }
-    }
-
-    @media(min-width: 1000px) {
-        padding: 0 10.8rem;
-    }
-
-    @keyframes increaseSize{
-        0% {
-            opacity: 0;
-            scale: 0;
-        }
-
-        100% {
-            opacity: 1;
-            scale: 1;
-        }
-    }
-`
-
-export const Form = styled.form`
-    width: 100%;
-    max-width: 70rem;
-    margin: 0 auto;
-    padding: 0 2.4rem;
-    animation: rotateSignIn 0.3s linear;
-
-    > h1 {
+      legend {
         display: none;
-    }
+      }
 
-    > div:first-child {
-        margin-bottom: 7.3rem;
-        padding: 0;
+      a {
+        margin: 0 auto;
 
-        
-        @media (max-width: 395px) {
-        > h1 {
-            font-size: 3.4rem;
-        }
-        
-        img {
-            width: 3.5rem;
-            height: 3.5rem;
-        }
-        }
-
-        @media (max-width: 350px) {
-        > h1 {
-            font-size: 2.8rem;
-        }
-        
-        img {
-            width: 3rem;
-            height: 3rem;
-        }
-        }
-    }
-    
-    > label {
-        color: ${({ theme }) => theme.COLORS.LIGHT_400};
-        font-family: "Roboto", "serif";
-        font-weight: 400;
-        font-size: 1.6rem;
-    }
-
-    > div {
-        margin-top: 2px;
-        margin-bottom: 3.2rem;
-        padding: 0 1rem;
-    }
-
-    > a {
-        display: flex;
-        justify-content: center;
-        margin: 3rem auto;
-        max-width: 13.5rem;
-
-        color: ${({ theme }) => theme.COLORS.LIGHT_100};
-        border: none;
-        background-color: none;
-
-        font-family: "Poppins", "serif";
-        font-weight: 500;
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
         font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      }
     }
+  }
 
-    @media (min-width:820px) {
+  .loading {
+    position: absolute;
+    top: 30%;
+    right: 21%;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.4rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
+  }
+
+  @media screen and (min-width: 1000px) {
+    main {
+      width: 100%;
+      max-width: 110.6rem;
+      margin: 14.2rem auto;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      form {
         background-color: ${({ theme }) => theme.COLORS.DARK_700};
-        border-radius: 1.6rem;
-        padding: 0 7rem;
+        border: none;
+        border-radius: 16px;
+        margin: 0;
+        padding: 6.4rem;
 
+        legend {
+          width: 34.8rem;
 
-        > div:first-child {
-            display: none;
+          display: block;
+
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-size: 3.2rem;
+          line-height: 1.4rem;
+          color: ${({ theme }) => theme.COLORS.LIGHT_100};
+          text-align: center;
         }
-
-        h1 {
-            display: flex;
-            justify-content: center;
-            margin-top: 7.4rem;
-            margin-bottom: 4.2rem;
-            
-            font-family: "Poppins", "serif";
-            font-weight: 500;
-            font-size: 3.2rem;
-        }
+      }
     }
 
-    @media (min-width: 1360px) {
-        padding: 0 10rem;
+    .loading {
+      top: 40%;
+      right: 45%;
     }
-
-    @keyframes rotateSignIn{
-        0% {
-            transform: rotate(-180deg);
-            opacity: 0;
-            scale: 0;
-        }
-
-        100% {
-            transform: rotate(0);
-            opacity: 1;
-            scale: 1;
-        }
-    }
-`
+  }
+`;

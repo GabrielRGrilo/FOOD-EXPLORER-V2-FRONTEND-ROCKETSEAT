@@ -13,6 +13,6 @@ export const Container = styled.div`
     font-weight: bold;
     font-size: 3.724rem;
     line-height: 1;
-    color: ${({ theme }) => theme.colors.light_100};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
   }
 `;

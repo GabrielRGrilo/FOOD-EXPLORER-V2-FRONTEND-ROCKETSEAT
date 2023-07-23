@@ -1,9 +1,7 @@
-import { Container } from './styles';
-import { Form } from "/styles";
+import { Container} from './styles';
 
 import { useAuth } from '../../hooks/auth';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { Logo} from '../../components/Logo';
 import { Input } from '../../components/Input';
@@ -27,13 +25,13 @@ export function SignIn() {
       <main>
         <Logo />
 
-        <Form>
+        <form>
           <legend>Faça o login</legend>
 
           <Input
             label="Email"
             type="email"
-            placeholder="Exemplo: exemplo@exemplo.com.br"
+            placeholder="exemplo@email.com.br"
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -51,8 +49,7 @@ export function SignIn() {
             disabled={loading}
           />
 
-          <Link to="/register">Criar uma conta</Link>
-        </Form>
+        </form>
       </main>
 
 

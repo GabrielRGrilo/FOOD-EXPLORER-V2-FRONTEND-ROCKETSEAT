@@ -1,47 +1,43 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Container = styled.div`
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  label {
-    font-family: ${({ theme }) => theme.fonts.roboto.small_regular.family};
-    font-weight: ${({ theme }) => theme.fonts.roboto.small_regular.weight};
-    font-size: ${({ theme }) => theme.fonts.roboto.small_regular.size};
-    line-height: ${({ theme }) => theme.fonts.roboto.small_regular.height};
-    color: ${({ theme }) => theme.colors.light_400};
-  }
-
-  input {
+    display: flex;
+    align-items: center;
+    background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    padding: 1.2rem 1.6rem;
+    border-radius: 0.8rem;
     height: 4.8rem;
-    background-color: ${({ theme }) => theme.colors.dark_900};
-    border: none;
-    border-radius: 8px;
-    padding: 1.2rem 1.4rem;
 
-    font-family: ${({ theme }) => theme.fonts.roboto.small_regular.family};
-    font-weight: ${({ theme }) => theme.fonts.roboto.small_regular.weight};
-    font-size: ${({ theme }) => theme.fonts.roboto.small_regular.size};
-    line-height: ${({ theme }) => theme.fonts.roboto.small_regular.height};
-    color: ${({ theme }) => theme.colors.light_300};
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
 
-    &::placeholder {
-      color: ${({ theme }) => theme.colors.light_500};
+    > svg {
+        color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
-  }
+    
+    > input {
+        background: transparent;
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
-  input[type='number'] {
-    appearance: number;
-    -moz-appearance: textfield;
-  }
+        border: none;
+        width: 100%;
 
-  input[type='number']::-webkit-outer-spin-button,
-  input[type='number']::-webkit-inner-spin-button {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-`;
+        outline: none;
+
+        height: 4.8rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-left: 1.6rem;
+
+        &::placeholder {
+            color: ${({ theme }) => theme.COLORS.LIGHT_500};
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+`
