@@ -38,7 +38,7 @@ export const Content = styled.div`
   > div {
     width: 37.6rem;
     height: 12rem;
-    background-image: ${({ theme }) => theme.COLORS.GRADIENT_100};
+    background-image: ${({ theme }) => theme.COLORS.GRADIENT_200};
     border: none;
     border-radius: 2.92px;
     padding: 3.6rem 0.8rem 2.2rem 15.3rem;
