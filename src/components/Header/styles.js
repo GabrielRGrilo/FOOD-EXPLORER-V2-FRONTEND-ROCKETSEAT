@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  width: 42.8rem;
+  width: 100%;
   height: 11.4rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
   margin: 0 auto;
@@ -103,7 +103,7 @@ export const Container = styled.header`
 
         font-family: "Roboto", sans-serif;
         font-weight: 500;
-        font-size: 4rem;
+        font-size: 1.5rem;
         line-height: 1.4rem;
         color: ${({ theme }) => theme.COLORS.CAKE_200};
       }
