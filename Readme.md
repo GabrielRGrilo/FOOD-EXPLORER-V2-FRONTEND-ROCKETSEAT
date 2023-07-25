@@ -18,3 +18,4 @@ Para logar como usuário, cadastre-se na página Criar Conta.
 Para logar como administrador use o login: admin@email.com senha 123.
 
 Link do Deploy:
+https://food-explorerv2-rs.netlify.app
