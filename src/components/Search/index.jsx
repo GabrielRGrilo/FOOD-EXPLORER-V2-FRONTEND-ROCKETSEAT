@@ -1,8 +1,8 @@
-import { SearchSC } from './style';
+import { Container } from './styles';
 
 export function Search({ ...rest }) {
   return (
-    <SearchSC>
+    <Container>
       <svg
         width="20"
         height="20"
@@ -24,6 +24,6 @@ export function Search({ ...rest }) {
         placeholder="Busque por pratos ou ingredientes"
         {...rest}
       />
-    </SearchSC>
+    </Container>
   );
 }

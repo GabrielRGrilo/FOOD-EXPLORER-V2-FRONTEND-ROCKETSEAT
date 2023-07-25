@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const IngredientsSC = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: 3.2rem;
   background-color: ${({ theme, isNew }) =>
-    isNew ? 'transparent' : theme.colors.light_600};
+    isNew ? 'transparent' : theme.COLORS.LIGHT_600};
   border: ${({ theme, isNew }) =>
-    isNew ? `dashed 1px ${theme.colors.light_500}` : 'none'};
+    isNew ? `dashed 1px ${theme.COLORS.LIGHT_500}` : 'none'};
   border-radius: 8px;
   padding: 1rem 1.6rem;
 
@@ -19,14 +19,14 @@ export const IngredientsSC = styled.div`
     background: none;
     border: none;
 
-    font-family: ${({ theme }) => theme.fonts.roboto.small_regular.family};
-    font-weight: ${({ theme }) => theme.fonts.roboto.small_regular.weight};
-    font-size: ${({ theme }) => theme.fonts.roboto.small_regular.size};
-    line-height: ${({ theme }) => theme.fonts.roboto.small_regular.height};
-    color: ${({ theme }) => theme.colors.light_100};
+    font-family: 'Roboto', sans-serif;;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
     &::placeholder {
-      color: ${({ theme }) => theme.colors.light_500};
+      color: ${({ theme }) => theme.COLORS.LIGHT_500};
     }
   }
 

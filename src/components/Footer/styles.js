@@ -9,6 +9,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 
   > div {
     width: fit-content;

@@ -39,8 +39,10 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
+      
     }
 
+    
     .item {
       display: flex;
       flex-direction: column;
@@ -63,6 +65,7 @@ export const Container = styled.div`
         border: none;
         border-radius: 5px;
         padding: 1.6rem;
+        outline: none;
 
         appearance: none;
         -webkit-appearance: none;
@@ -105,6 +108,8 @@ export const Container = styled.div`
         padding: 1.2rem 3.2rem;
 
         cursor: pointer;
+
+       
 
         display: flex;
         align-items: center;
@@ -179,11 +184,18 @@ export const Container = styled.div`
         flex-direction: row;
         gap: 3.2rem;
         align-items: end;
-
+        
 
         > div {
           gap: 1.6rem;
+          
         }
+
+        > div:nth-child(2) {
+          width: 50%;
+        }
+      
+
       }
 
       .image label {

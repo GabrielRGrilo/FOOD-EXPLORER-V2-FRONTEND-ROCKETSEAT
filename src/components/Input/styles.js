@@ -7,6 +7,9 @@ export const Container = styled.div`
     padding: 1.2rem 1.6rem;
     border-radius: 0.8rem;
     height: 4.8rem;
+    outline: none;
+    
+
 
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;

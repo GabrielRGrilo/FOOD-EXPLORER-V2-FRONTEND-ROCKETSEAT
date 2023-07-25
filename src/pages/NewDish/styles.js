@@ -63,6 +63,7 @@ export const Container = styled.div`
         border: none;
         border-radius: 5px;
         padding: 1.6rem;
+        outline: none;
 
         appearance: none;
         -webkit-appearance: none;
@@ -170,6 +171,10 @@ export const Container = styled.div`
         > div {
           gap: 1.6rem;
         }
+        
+        > div:nth-child(2) {
+          width: 50%;
+        }
       }
 
       .image label {
@@ -200,6 +205,7 @@ export const Container = styled.div`
         padding: 1.2rem 2.4rem;
 
         align-self: end;
+        
       }
     }
   }

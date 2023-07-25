@@ -1,8 +1,8 @@
-import { IngredientsSC } from './style';
+import { Container } from './styles';
 
 export function Ingredients({ isNew, value, placeholder, onChange, onClick }) {
   return (
-    <IngredientsSC isNew={isNew}>
+    <Container isNew={isNew}>
       <input
         type="text"
         value={value}
@@ -56,6 +56,6 @@ export function Ingredients({ isNew, value, placeholder, onChange, onClick }) {
           </svg>
         )}
       </button>
-    </IngredientsSC>
+    </Container>
   );
 }

@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { Button } from '../Button';
 
+import increase from "../../assets/Increase.svg"
+import decrease from "../../assets/Decrease.svg"
+
 
 export function DishCard({ admin, id, name, image, price, description }) {
   const imageUrl = `${api.defaults.baseURL}/files/${image}`;

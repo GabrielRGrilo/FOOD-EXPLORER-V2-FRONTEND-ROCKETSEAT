@@ -64,7 +64,7 @@ export const Container = styled.div`
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 1.6rem;
-      color: ${({ theme }) => theme.COLOR.CAKE_200};
+      color: ${({ theme }) => theme.COLORS.CAKE_200};
     }
 
     > div {

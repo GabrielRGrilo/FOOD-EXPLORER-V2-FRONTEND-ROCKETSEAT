@@ -24,17 +24,19 @@ export function SignUp() {
 
     setLoading(true);
     api
-      .post('/user', { name, email, password })
+      .post('/users', { name, email, password })
       .then(() => {
         alert('Usuário cadastrado com sucesso!');
-        navigate('/');
+        navigate(-1);
+   
+
       })
       .catch((err) => {
         setLoading(false);
         if (err.response) {
           alert(err.response.data.message);
         } else {
-          alert('Não foi possível cadastrar o usuário');
+          navigate(-1);
         }
       });
   }
@@ -50,14 +52,14 @@ export function SignUp() {
           <Input
             label="Nome"
             type="text"
-            placeholder="Exemplo: Gabriel"
+            placeholder="Seu nome"
             onChange={(e) => setName(e.target.value)}
           />
 
           <Input
             label="Email"
             type="email"
-            placeholder="Exemplo: exemplo@email.com.br"
+            placeholder="exemplo@email.com.br"
             onChange={(e) => setEmail(e.target.value)}
           />
 

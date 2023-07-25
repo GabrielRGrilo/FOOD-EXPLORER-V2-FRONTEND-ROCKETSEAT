@@ -11,8 +11,8 @@ import { DishCard } from '../../components/DishCard';
 import macarrons from "../../assets/macarrons.png"
 
 import { Header } from '../../components/Header';
-import { DishCategories } from '../../components/DishCategories';
 import { Footer } from '../../components/Footer';
+import { DishCarousel } from '../../components/DishCarousel';
 
 export function Home({ admin }) {
   const [dishes, setDishes] = useState([]);
@@ -43,7 +43,7 @@ export function Home({ admin }) {
 
       <main>
         {dishes.filter((dish) => dish.category == 'refeicoes').length > 0 && (
-          <DishCategories admin={admin} title="Refeições">
+          <DishCarousel admin={admin} title="Refeições">
             {dishes.map(
               (dish) =>
                 dish.category == 'refeicoes' && (
@@ -58,11 +58,11 @@ export function Home({ admin }) {
                   />
                 )
             )}
-          </DishCategories>
+          </DishCarousel>
         )}
 
         {dishes.filter((dish) => dish.category == 'sobremesas').length > 0 && (
-          <DishCategories admin={admin} title="Sobremesas">
+          <DishCarousel admin={admin} title="Sobremesas">
             {dishes.map(
               (dish) =>
                 dish.category == 'sobremesas' && (
@@ -77,11 +77,11 @@ export function Home({ admin }) {
                   />
                 )
             )}
-          </DishCategories>
+          </DishCarousel>
         )}
 
         {dishes.filter((dish) => dish.category == 'bebidas').length > 0 && (
-          <DishCategories admin={admin} title="Bebidas">
+          <DishCarousel admin={admin} title="Bebidas">
             {dishes.map(
               (dish) =>
                 dish.category == 'bebidas' && (
@@ -96,7 +96,7 @@ export function Home({ admin }) {
                   />
                 )
             )}
-          </DishCategories>
+          </DishCarousel>
         )}
       </main>
 

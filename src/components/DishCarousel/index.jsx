@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 
 import { Container } from './styles';
 
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
 
-export function DishCategories({ title, children }) {
+export function DishCarousel({ title, children }) {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
 
